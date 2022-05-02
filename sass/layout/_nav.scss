@@ -1,37 +1,40 @@
 .nav__list {
+  display: none;
+
+  @media screen and (min-width: 768px) {
     display: flex;
   }
-  
-  .nav__item:not(:first-child) {
-    margin-left: 50px;
-  }
-  
-  .nav__link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: $accent;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    list-style: none;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: color 250ms $timing-function;
+}
 
-    &:hover,
-    &:focus {
+.nav__item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $accent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  list-style: none;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 250ms $timing-function;
+
+  &:hover &:focus {
     color: $logo-color-web;
   }
 }
 
 .nav__link--current {
-    color: $logo-color-web;
-    position: relative;
-    display: block;
+  color: $logo-color-web;
+  position: relative;
+  display: block;
 
   /* Линия */
-    &::after {
+  &::after {
     position: absolute;
     border-radius: 2px;
     display: block;

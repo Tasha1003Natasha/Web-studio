@@ -1,36 +1,67 @@
 .contacts {
-    display: flex;
-    margin-left: auto;
-  
-    &__item:not(:first-child) {
-    margin-left: 52px;
+  display: none;
+  margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    display: block;
   }
 
-    /*  Иконки */
-    &_icon {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+
+  /*  Иконки */
+  &_icon {
     display: inline-block;
     fill: currentColor;
-    margin-right: 10px;
     align-items: baseline;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 8px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+    }
   }
-  
+
+  &__item {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      &:not(:first-child) {
+        margin-left: 52px;
+      }
+    }
+  }
 }
-  
-  .contacts__link {
-    display: flex;
-    color: $text-color;
-    font-weight: 500;
+
+.contacts__link {
+  display: flex;
+  color: $text-color;
+  font-weight: 500;
+  list-style: none;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.14;
-    list-style: none;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    align-items: center;
     transition: color 250ms $timing-function;
-  
+
     &:hover,
     &:focus {
-    color: $logo-color-web;
+      color: $logo-color-web;
+    }
   }
 }
-  
