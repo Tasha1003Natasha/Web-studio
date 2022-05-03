@@ -24,9 +24,9 @@
 
   margin-bottom: 20px;
 
-  // @include mq(tablet-only) {
-  //   display: block;
-  // }
+  @include mq(tablet-only) {
+    display: block;
+  }
 
   @include mq(desktop) {
     display: block;
