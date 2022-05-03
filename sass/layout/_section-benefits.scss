@@ -1,62 +1,106 @@
 .section-benefits {
+  padding-top: 60px;
+
+  @include mq(tablet) {
     padding-top: 94px;
   }
+}
 
-  /* Загаловки h3 */
+/* Загаловки h3 */
 .title-text {
-    margin-top: 0;
-    margin-left: 0;
-    margin-bottom: 10px;
-    margin-right: 0;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $accent;
+  text-align: center;
 
-      /* Иконки */
-    &__icon {
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 10px;
+  margin-right: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $accent;
+
+  @include mq(tablet) {
+    text-align: start;
+  }
+
+  /* Иконки */
+  &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    width: 270px;
+    width: 450px;
     height: 120px;
     background-color: #f5f4fa;
     border-radius: 4px;
     padding: 25px 100px;
-      }
+
+    @include mq(tablet) {
+      width: 354px;
+    }
+
+    @include mq(desktop) {
+      width: 270px;
+    }
   }
-  
-  .page-benefits {
+}
+
+.page-benefits {
+  flex-basis: 450px;
+
+  @include mq(tablet-only) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include mq(desktop) {
     display: flex;
     justify-content: center;
-        
-         /* абзацы после h3 */
-      &-text {
+
+    //   /* абзацы после h3 */
+    &-text {
       font-size: 14px;
       line-height: 2;
       letter-spacing: 0.03em;
-     }
+    }
   }
 
-
   .benefits {
-    width: 270px;
-     
-       &:nth-child(-n + 3) {
+    flex-basis: 450px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mq(tablet-only) {
+      flex-basis: 354px;
+
+      &:nth-child(2n + 1) {
         margin-right: 30px;
       }
-      
+    }
+
+    @include mq(desktop) {
+      fex-basis: 270px;
+      margin-bottom: 0;
+
+      &:nth-child(-n + 3) {
+        margin-right: 30px;
+      }
+
       &:last-child {
         margin-right: 0;
       }
+    }
   }
+}
 
 //   /* абзацы после h3 */
 .benefits-text {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.03em;
-} 
+}

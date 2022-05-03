@@ -1,25 +1,22 @@
 .header {
   border-bottom: 1px solid #ececec;
 
-  &__conteiner {
-    display: flex;
-    align-items: center;
+    &__conteiner {
+      display: flex;
+      align-items: center;
+    }
   }
-}
+
+
 
 .header__logo {
-  margin-top: 16px;
-  margin-right: 276px;
-  margin-bottom: 16px;
-  margin-left: 0;
-
-  @media screen and (min-width: 768px) {
-    margin-top: 0;
+  padding: 16px 0;
+ 
+  @include mq(tablet) {
     margin-right: 88px;
-    margin-bottom: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     margin-right: 94px;
   }
 }

@@ -2,11 +2,11 @@
   display: none;
   margin-left: auto;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     display: block;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     display: flex;
   }
 
@@ -16,23 +16,23 @@
     fill: currentColor;
     align-items: baseline;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       margin-right: 8px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       margin-right: 10px;
     }
   }
 
   &__item {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include mq(tablet-only) {
       &:not(:last-child) {
         margin-bottom: 10px;
       }
     }
 
-    @media screen and (min-width: 1200px) {
+    @include mq(desktop) {
       &:not(:first-child) {
         margin-left: 52px;
       }
@@ -49,12 +49,12 @@
   letter-spacing: 0.02em;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     font-size: 12px;
     line-height: 1.16;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     font-size: 14px;
     line-height: 1.14;
     transition: color 250ms $timing-function;
