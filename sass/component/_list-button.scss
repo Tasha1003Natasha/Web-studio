@@ -1,4 +1,13 @@
 .list-button {
+   display: flex;
+   flex-wrap: wrap;
+
+   & .item-btn + .item-btn {
+    margin-left: 8px;
+    margin-bottom: 15px;
+  } 
+
+  @include mq(tablet) {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -6,6 +15,8 @@
      & .item-btn + .item-btn {
         margin-left: 8px;
       } 
+    }
+  
   }
   
 

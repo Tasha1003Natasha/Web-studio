@@ -6,6 +6,12 @@
   & .socials-item-footer + .socials-item-footer {
     margin-left: 10px;
   }
+
+  @include mq(tablet-only) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
   
 }
 
