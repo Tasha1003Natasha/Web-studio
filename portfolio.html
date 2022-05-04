@@ -50,6 +50,75 @@
                 <use href="./images/icons.svg#icon-phone"></use></svg >+380961111111</a>
           </li>
         </ul>
+
+<!-- Бургер меню -->
+<button
+class="menu-button"
+type="button"
+data-menu-button
+aria-expanded="false"
+>
+<svg class="menu__icon" width="40" height="40">
+  <use
+    class="menu_icon menu_icon--open"
+    href="./images/icons.svg#icon-menu"></use>
+  <use
+    class="menu_icon menu_icon--close"
+    href="./images/icons.svg#icon-menu_close"></use>
+</svg>
+</button>
+<!-- Модальное окно бургер меню -->
+
+<div class="menu" data-menu>
+
+ <nav class="menu__nav">
+    <ul class="menu__nav-list list">
+      <li class="menu__nav-item">
+        <a class="menu__nav-link list" href="">Студия</a>
+      </li>
+      <li class="menu__nav-item">
+        <a class="menu__nav-link list" href="./portfolio.html">Портфолио</a>
+      </li>
+      <li class="menu__nav-item">
+        <a class="menu__nav-link list" href="">Контакты</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="menu__group">
+    <a class="menu__phone list" href="tel:+38 096 111 11 11"
+      >+38 096 111 11 11</a>
+ 
+      <a class="menu__mail list" href="mailto:info@devstudio.com">info@devstudio.com</a>
+  </div>
+
+
+  <ul class="public-socials list">
+    <li class="public-socials__item">
+      <a class="public-socials__link list" href="https://www.instagram.com/" lang="en"
+        >Instagram</a  ></li>
+
+    <li class="public-socials__item">
+      <a class="public-socials__link list" href="https://twitter.com/" lang="en"
+        >Twitter</a
+      >
+    </li>
+
+    <li class="public-socials__item">
+      <a class="public-socials__link list" href="https://www.facebook.com/" lang="en"
+        >Facebook</a
+      >
+    </li>
+
+    <li class="public-socials__item">
+      <a class="public-socials__link list" href="https://ru.linkedin.com/" lang="en"
+        >LinkedIn</a
+      >
+    </li>
+  </ul>
+</div>
+
+
       </div>
     </header>
  <!-- Секция с кнопками -->
@@ -71,14 +140,15 @@
  
   <ul class="page-element"> 
     <li class="list element">
-
- Картинки
-      <!-- <picture>
-         Desktop  -->
+      <a class="list element-link"
+      href="">
+ <!-- Картинки -->
+       <picture>
+         <!-- Desktop  --> 
         <source
           srcset="
-            ./images/portfolio-gallery/img_lg.jpg    1x,
-            ./images/portfolio-gallery/img@2x_lg.jpg 2x
+            ./images/portfolio/Desktop/1.jpg    1x,
+            ./images/portfolio/Desktop/2x/img1@2x.jpg 2x
           "
           media="(min-width: 1200px)"
           type="image/jpg"
@@ -86,39 +156,31 @@
         <!-- Tablet  -->
         <source
           srcset="
-            ./images/portfolio-gallery/img_md.jpg    1x,
-            ./images/portfolio-gallery/img@2x_md.jpg 2x
+            ./images/portfolio/Tablet/img-1 .jpg   1x,
+            ./images/portfolio/Tablet/2x/img1@2x.jpg 2x
           "
+        
           media="(min-width: 768px)"
           type="image/jpg"
         />
         <!-- Mobile -->
         <source
           srcset="
-            ./images/portfolio-gallery/img_sm.jpg    1x,
-            ./images/portfolio-gallery/img@2x_sm.jpg 2x
+          ./images/portfolio/Mobile/img-1.jpg 1x,
+          ./images/portfolio/Mobile/2x/img1@2x.jpg 2x
           "
           media="(max-width: 767px)"
           type="image/jpg"
         />
         <!-- Default  -->
         <img
-          class="list element-link"
-
-          src="./images/portfolio/Desktop/1.jpg"
+          src="./images/portfolio/Mobile/img-1.jpg"
           alt="технокряк"
           width="450"
           height="294"
           loading="lazy"
         />
       </picture> 
-
-        <a class="list element-link"
-        href="">
-    <img src="./images/portfolio/Mobile/img-1.jpg" alt="технокряк" width="" height="">
-
-
-
 
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
@@ -134,7 +196,47 @@
    <li class="list element">
        <a class="list element-link"
        href="">
-    <img src="./images/portfolio/Mobile/img-2.jpg" alt="постер" width="" height="">
+<!-- 2 Картинка -->
+       <picture>
+        <!-- Desktop  --> 
+       <source
+         srcset="
+           ./images/portfolio/Desktop/2.jpg    1x,
+           ./images/portfolio/Desktop/2x/img2@2x.jpg 2x
+         "
+         media="(min-width: 1200px)"
+         type="image/jpg"
+       />
+       <!-- Tablet  -->
+       <source
+         srcset="
+           ./images/portfolio/Tablet/2.jpg  1x,
+           ./images/portfolio/Tablet/2x/img2@2x.jpg 2x
+         "
+       
+         media="(min-width: 768px)"
+         type="image/jpg"
+       />
+       <!-- Mobile -->
+       <source
+         srcset="
+         ./images/portfolio/Mobile/img-2.jpg 1x,
+         ./images/portfolio/Mobile/2x/img2@2x.jpg 2x
+         "
+
+         media="(max-width: 767px)"
+         type="image/jpg"
+       />
+       <!-- Default  -->
+       <img
+         src="/images/portfolio/Mobile/img-2.jpg"
+         alt="дизайн"
+         width="450"
+         height="294"
+         loading="lazy"
+       />
+     </picture> 
+
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
     
@@ -148,7 +250,48 @@
    <li class="list element">
        <a class="list element-link"
         href="">
-    <img src="./images/portfolio/Mobile/img-3.jpg" alt="ресторан" width="" height="">
+<!-- 3 Картинка -->
+<picture>
+  <!-- Desktop  --> 
+ <source
+   srcset="
+     ./images/portfolio/Desktop/3.jpg  1x,
+     ./images/portfolio/Desktop/2x/img3@2x.jpg 2x
+   "
+   media="(min-width: 1200px)"
+   type="image/jpg"
+ />
+ <!-- Tablet  -->
+ <source
+   srcset="
+     ./images/portfolio/Tablet/img-3.jpg  1x,
+     ./images/portfolio/Tablet/2x/img3@2x.jpg 2x
+   "
+ 
+   media="(min-width: 768px)"
+   type="image/jpg"
+ />
+ <!-- Mobile -->
+ <source
+   srcset="
+   ./images/portfolio/Mobile/img-3.jpg 1x,
+   ./images/portfolio/Mobile/2x/img3@2x.jpg 2x
+   "
+
+   media="(max-width: 767px)"
+   type="image/jpg"
+ />
+ <!-- Default  -->
+ <img
+   src="./images/portfolio/Mobile/img-3.jpg"
+   alt="ресторан"
+   width="450"
+   height="294"
+   loading="lazy"
+ />
+</picture> 
+
+
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
     
@@ -162,7 +305,49 @@
    <li class="list element">
        <a class="list element-link"
         href="">
-    <img src="./images/portfolio/Mobile/img-4.jpg" alt="наушники" width="" height="">
+
+      <!-- Картинка 4 -->
+        <picture>
+          <!-- Desktop  --> 
+         <source
+           srcset="
+             ./images/portfolio/Desktop/4.jpg    1x,
+             ./images/portfolio/Desktop/2x/img4@2x.jpg 2x
+           "
+           media="(min-width: 1200px)"
+           type="image/jpg"
+         />
+
+         <!-- Tablet  -->
+         <source
+           srcset="
+             ./images/portfolio/Tablet/img-4 .jpg   1x,
+             ./images/portfolio/Tablet/2x/img4@2x.jpg 2x
+           "
+         
+           media="(min-width: 768px)"
+           type="image/jpg"
+         />
+         <!-- Mobile -->
+         <source
+           srcset="
+           ./images/portfolio/Mobile/img-4.jpg 1x,
+           ./images/portfolio/Mobile/2x/img4@2x.jpg 2x
+           "
+           media="(max-width: 767px)"
+           type="image/jpg"
+         />
+
+         <!-- Default  -->
+         <img
+           src="./images/portfolio/Mobile/img-4.jpg"
+           alt="наушники"
+           width="450"
+           height="294"
+           loading="lazy"
+         />
+       </picture> 
+
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
     
@@ -176,7 +361,47 @@
    <li class="list element">
        <a class="list element-link"
         href="">
-    <img src="./images/portfolio/Mobile/img-5.jpg" alt="коробка" width="" height="">
+<!-- 5 Картинка -->
+<picture>
+  <!-- Desktop  --> 
+ <source
+   srcset="
+     ./images/portfolio/Desktop/5.jpg  1x,
+     ./images/portfolio/Desktop/2x/img5@2x.jpg 2x
+   "
+   media="(min-width: 1200px)"
+   type="image/jpg"
+ />
+ <!-- Tablet  -->
+ <source
+   srcset="
+     ./images/portfolio/Tablet/img-5.jpg  1x,
+     ./images/portfolio/Tablet/2x/img5@2x.jpg 2x
+   "
+ 
+   media="(min-width: 768px)"
+   type="image/jpg"
+ />
+ <!-- Mobile -->
+ <source
+   srcset="
+   ./images/portfolio/Mobile/img-5.jpg 1x,
+   ./images/portfolio/Mobile/2x/img5@2x.jpg 2x
+   "
+
+   media="(max-width: 767px)"
+   type="image/jpg"
+ />
+ <!-- Default  -->
+ <img
+   src="./images/portfolio/Mobile/img-5.jpg"
+   alt="коробка"
+   width="450"
+   height="294"
+   loading="lazy"
+ />
+</picture> 
+
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
     
@@ -190,7 +415,47 @@
    <li class="list element">
        <a class="list element-link"
        href="">
-    <img src="./images/portfolio/Mobile/img-6.jpg" alt="экран" width="" height="">
+<!-- 6 Картинка -->
+<picture>
+  <!-- Desktop  --> 
+ <source
+   srcset="
+     ./images/portfolio/Desktop/6.jpg  1x,
+     ./images/portfolio/Desktop/2x/img6@2x.jpg 2x
+   "
+   media="(min-width: 1200px)"
+   type="image/jpg"
+ />
+ <!-- Tablet  -->
+ <source
+   srcset="
+     ./images/portfolio/Tablet/img-6.jpg  1x,
+     ./images/portfolio/Tablet/2x/img6@2x.jpg 2x
+   "
+ 
+   media="(min-width: 768px)"
+   type="image/jpg"
+ />
+ <!-- Mobile -->
+ <source
+   srcset="
+   ./images/portfolio/Mobile/img-6.jpg 1x,
+   ./images/portfolio/Mobile/2x/img6@2x.jpg 2x
+   "
+
+   media="(max-width: 767px)"
+   type="image/jpg"
+ />
+ <!-- Default  -->
+ <img
+   src="./images/portfolio/Mobile/img-6.jpg"
+   alt="экран"
+   width="450"
+   height="294"
+   loading="lazy"
+   />
+  </picture> 
+
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
     
@@ -204,7 +469,47 @@
    <li class="list element">
        <a class="list element-link"
        href="">
-    <img src="./images/portfolio/Mobile/img-7.jpg" alt="издание" width="" height="">
+<!-- 7 Картинка -->
+<picture>
+  <!-- Desktop  --> 
+ <source
+   srcset="
+     ./images/portfolio/Desktop/7.jpg  1x,
+     ./images/portfolio/Desktop/2x/img7@2x.jpg 2x
+   "
+   media="(min-width: 1200px)"
+   type="image/jpg"
+ />
+ <!-- Tablet  -->
+ <source
+   srcset="
+     ./images/portfolio/Tablet/img-7.jpg  1x,
+     ./images/portfolio/Tablet/2x/img7@2x.jpg 2x
+   "
+ 
+   media="(min-width: 768px)"
+   type="image/jpg"
+ />
+ <!-- Mobile -->
+ <source
+   srcset="
+   ./images/portfolio/Mobile/img-7.jpg 1x,
+   ./images/portfolio/Mobile/2x/img7@2x.jpg 2x
+   "
+
+   media="(max-width: 767px)"
+   type="image/jpg"
+ />
+ <!-- Default  -->
+ <img
+   src="./images/portfolio/Mobile/img-7.jpg"
+   alt="издание"
+   width="450"
+   height="294"
+   loading="lazy"
+   />
+  </picture> 
+
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
     
@@ -218,7 +523,47 @@
    <li class="list element">
        <a class="list element-link"
         href="">
-    <img src="./images/portfolio/Mobile/img-8.jpg" alt="бирка" width="" height="">
+<!-- 8 Картинка -->
+<picture>
+  <!-- Desktop  --> 
+ <source
+   srcset="
+     ./images/portfolio/Desktop/8.jpg  1x,
+     ./images/portfolio/Desktop/2x/img8@2x.jpg 2x
+   "
+   media="(min-width: 1200px)"
+   type="image/jpg"
+ />
+ <!-- Tablet  -->
+ <source
+   srcset="
+     ./images/portfolio/Tablet/img-8.jpg  1x,
+     ./images/portfolio/Tablet/2x/img8@2x.jpg 2x
+   "
+ 
+   media="(min-width: 768px)"
+   type="image/jpg"
+ />
+ <!-- Mobile -->
+ <source
+   srcset="
+   ./images/portfolio/Mobile/img-8.jpg 1x,
+   ./images/portfolio/Mobile/2x/img8@2x.jpg 2x
+   "
+
+   media="(max-width: 767px)"
+   type="image/jpg"
+ />
+ <!-- Default  -->
+ <img
+   src="./images/portfolio/Mobile/img-8.jpg"
+   alt="бирка"
+   width="450"
+   height="294"
+   loading="lazy"
+   />
+  </picture> 
+
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
     
@@ -232,7 +577,47 @@
    <li class="list element">
        <a class="list element-link"
        href="">
-    <img src="./images/portfolio/Mobile/img-9.jpg" alt="бизнес" width="" height="">
+<!-- 9 Картинка -->
+<picture>
+  <!-- Desktop  --> 
+ <source
+   srcset="
+     ./images/portfolio/Desktop/9.jpg  1x,
+     ./images/portfolio/Desktop/2x/img9@2x.jpg 2x
+   "
+   media="(min-width: 1200px)"
+   type="image/jpg"
+ />
+ <!-- Tablet  -->
+ <source
+   srcset="
+     ./images/portfolio/Tablet/img-9.jpg  1x,
+     ./images/portfolio/Tablet/2x/img9@2x.jpg 2x
+   "
+ 
+   media="(min-width: 768px)"
+   type="image/jpg"
+ />
+ <!-- Mobile -->
+ <source
+   srcset="
+   ./images/portfolio/Mobile/img-9.jpg 1x,
+   ./images/portfolio/Mobile/2x/img9@2x.jpg 2x
+   "
+
+   media="(max-width: 767px)"
+   type="image/jpg"
+ />
+ <!-- Default  -->
+ <img
+   src="./images/portfolio/Mobile/img-9.jpg"
+   alt="бизнес"
+   width="450"
+   height="294"
+   loading="lazy"
+   />
+  </picture> 
+
     <p class="element-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
     </p>
     

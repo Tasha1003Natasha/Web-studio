@@ -5,16 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: $bg-title;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/fon/mobile1.jpg);
-   
-
   height: 400px;
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -33,7 +24,75 @@
     height: 600px;
   }
 
-  &__title {
+  // background-image: linear-gradient(
+  //     to right,
+  //     rgba(47, 48, 58, 0.4),
+  //     rgba(47, 48, 58, 0.4)
+  //   ),
+  //   url(../images/fon/mobile1.jpg);
+
+
+    // mobile ///////
+    @include mq(mobile) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/fon/mobile1.jpg);
+    }
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/fon/mobile@2x.jpg);
+    }
+
+    // tablet ///////
+    @include mq(tablet) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/fon/tablet1x.jpg);
+    }
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/fon/tablet@2x.jpg);
+    }
+
+
+    // desktop ///////
+    @include mq(tablet) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/fon/fon.jpg);
+    }
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/fon/desktop_fon@2x.jpg);
+    }
+
+}
+
+  .caption__title {
     margin-top: 0;
     margin-bottom: 30px;
     width: 360px;
@@ -53,7 +112,6 @@
       font-size: 44px;
       line-height: 1.4;
     }
-  }
 }
 
 .caption__button {
