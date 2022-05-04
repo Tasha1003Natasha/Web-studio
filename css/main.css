@@ -1169,6 +1169,7 @@ svg {
 
 .menu {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   transform: translateX(100%);
@@ -1772,5 +1773,9 @@ svg {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+}
+
+.active:active {
+  background-color: rgba(33, 150, 243, 0.9);
 }
 /*# sourceMappingURL=main.css.map */
