@@ -10,28 +10,6 @@
   background-size: cover;
   background-position: center;
 
-  @include mq(mobile) {
-    max-width: 480px;
-  }
-
-  @include mq(tablet) {
-    max-width: 768px;
-  }
-
-  @include mq(desktop) {
-    padding: 200px 0;
-    max-width: 1600px;
-    height: 600px;
-  }
-
-  // background-image: linear-gradient(
-  //     to right,
-  //     rgba(47, 48, 58, 0.4),
-  //     rgba(47, 48, 58, 0.4)
-  //   ),
-  //   url(../images/fon/mobile1.jpg);
-
-
     // mobile ///////
     @include mq(mobile) {
       background-image: linear-gradient(
@@ -72,7 +50,9 @@
 
 
     // desktop ///////
-    @include mq(tablet) {
+    @include mq(desktop) {
+      padding: 200px 0;
+      height: 600px;
       background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),

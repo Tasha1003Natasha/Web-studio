@@ -363,26 +363,6 @@ svg {
 
 @media screen and (min-width: 480px) {
   .caption {
-    max-width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .caption {
-    max-width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .caption {
-    padding: 200px 0;
-    max-width: 1600px;
-    height: 600px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .caption {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/mobile1.jpg);
   }
 }
@@ -405,8 +385,10 @@ svg {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .caption {
+    padding: 200px 0;
+    height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/fon.jpg);
   }
 }
