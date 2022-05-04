@@ -58,27 +58,10 @@
 }
 
 // <!-- Модальное окно бургер меню -->
-.menu-overlay {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
+.menu {
   position: fixed;
   top: 0;
   left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  @include mq(tablet) {
-    display: none;
-  }
-}
-
-.menu {
-  position: absolute;
-  top: 0;
-  right: 0;
   transform: translateX(100%);
 
   max-width: 480px;
@@ -93,8 +76,12 @@
 
   transition: transform 250ms $timing-function;
 
-  .menu-overlay.is-open & {
+  &.is-open  {
     transform: translateX(0);
+  }
+
+  @include mq (tablet) {
+    display: none;
   }
 }
 
