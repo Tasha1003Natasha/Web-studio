@@ -1118,7 +1118,7 @@ svg {
 
 .menu-button {
   position: relative;
-  z-index: 1;
+  z-index: 100;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -1131,9 +1131,9 @@ svg {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .menu-button {
-    display: none;
+    z-index: 0;
   }
 }
 
@@ -1174,7 +1174,7 @@ svg {
   display: flex;
   flex-direction: column;
   position: fixed;
-  z-index: 0;
+  z-index: 10;
   top: 0;
   left: 0;
   transform: translateX(100%);
@@ -1191,9 +1191,9 @@ svg {
   transform: translateX(0);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .menu {
-    display: none;
+    z-index: 0;
   }
 }
 
