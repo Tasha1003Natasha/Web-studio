@@ -87,10 +87,9 @@
   }
 }
 
-
 /* Форма футера */
 .footer-form {
-   margin-top: 60px;
+  margin-top: 60px;
 
   @include mq(desktop) {
     list-style: none;
@@ -113,13 +112,10 @@
   margin-top: 0;
   margin-bottom: 20px;
 
-
   @include mq(desktop) {
     display: block;
   }
 }
-
-
 
 .footer-form-input {
   padding-left: 15px;
@@ -135,7 +131,13 @@
   background-color: #2f303a;
   outline: transparent;
   transition: border-color 250ms $timing-function,
-  color 250ms var(--timing-function), box-shadow 250ms $timing-function;
+    color 250ms var(--timing-function), box-shadow 250ms $timing-function;
+
+
+    @include mq(tablet-only) {
+      display: block;
+      width: 358px;
+    }
 
   @include mq(desktop) {
     display: block;
@@ -161,7 +163,6 @@
     flex-direction: column;
     align-items: center;
   }
-
 }
 
 .footer-form-button {
