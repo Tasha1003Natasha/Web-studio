@@ -1,6 +1,6 @@
 .menu-button {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 
   width: 40px;
   height: 40px;
@@ -57,8 +57,11 @@
 
 // <!-- Модальное окно бургер меню -->
 .menu {
+  display: flex;
+  flex-direction: column;
+
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   left: 0;
   transform: translateX(100%);
@@ -66,8 +69,7 @@
   max-width: 480px;
   width: 100%;
   height: 100%;
-  padding: 40px;
-  padding-top: 48px;
+  padding: 40px 48px;
 
   background-color: $page-color;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
@@ -109,38 +111,47 @@
 
 // Секция телефон и почта///////
 .menu__group {
-  display: flex;
-  flex-direction: column;
-  margin-top: 302px;
+  margin-top: auto;
+  margin-bottom: 64px;
 
   font-family: $main-font;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-.menu__phone {
+.menu__item-phone {
   margin-bottom: 32px;
-  font-size: 34px;
-  line-height: 1.25;
-  color: $logo-color-web;
+}
+
+.menu__phone {
+    color: $logo-color-web;
+    font-size: 34px;
+    line-height: 1.25;
 }
 
 .menu__mail {
-  margin-bottom: 64px;
+  color: $text-color;
   font-size: 24px;
   line-height: 1.17;
-  color: $text-color;
+  
 }
 
 // Соц. сети///////
-.public-socials__item {
-  display: inline;
-  margin-bottom: 8px;
-  padding-right: 10px;
-  padding-left: 10px;
+.public-socials {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
+.public-socials__item {
+  display: flex;
+
+  @media screen and (max-width: 479px) {
+    margin-bottom: 10px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 
   &:last-child {
     padding-right: 0;
@@ -150,6 +161,15 @@
   &:first-child {
     padding-left: 0;
   }
+}
+
+.public-socials__item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
 }
 
 .public-socials__link {

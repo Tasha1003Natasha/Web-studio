@@ -235,6 +235,11 @@ svg {
   margin-left: 50px;
 }
 
+.nav__item:hover,
+.nav__link:focus {
+  color: #2196f3;
+}
+
 .nav__link {
   display: block;
   padding-top: 32px;
@@ -249,7 +254,8 @@ svg {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__link:hover .nav__link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: #2196f3;
 }
 
@@ -270,6 +276,10 @@ svg {
   width: 100%;
   height: 4px;
   background-color: #2196f3;
+}
+
+.menu__nav-link.menu__nav-current {
+  color: #2196f3;
 }
 
 .contacts {
@@ -382,6 +392,7 @@ svg {
 @media screen and (min-width: 1200px) {
   .caption {
     padding: 200px 0;
+    max-width: 1600px;
     height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/fon.jpg);
   }
@@ -1107,7 +1118,7 @@ svg {
 
 .menu-button {
   position: relative;
-  z-index: 10;
+  z-index: 1;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -1160,16 +1171,17 @@ svg {
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   left: 0;
   transform: translateX(100%);
   max-width: 480px;
   width: 100%;
   height: 100%;
-  padding: 40px;
-  padding-top: 48px;
+  padding: 40px 48px;
   background-color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1208,35 +1220,46 @@ svg {
 }
 
 .menu__group {
-  display: flex;
-  flex-direction: column;
-  margin-top: 302px;
+  margin-top: auto;
+  margin-bottom: 64px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-.menu__phone {
+.menu__item-phone {
   margin-bottom: 32px;
+}
+
+.menu__phone {
+  color: #2196f3;
   font-size: 34px;
   line-height: 1.25;
-  color: #2196f3;
 }
 
 .menu__mail {
-  margin-bottom: 64px;
+  color: #757575;
   font-size: 24px;
   line-height: 1.17;
-  color: #757575;
+}
+
+.public-socials {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .public-socials__item {
-  display: inline;
-  margin-bottom: 8px;
-  padding-right: 10px;
-  padding-left: 10px;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
+  display: flex;
+}
+
+@media screen and (max-width: 479px) {
+  .public-socials__item {
+    margin-bottom: 10px;
+  }
+}
+
+.public-socials__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .public-socials__item:last-child {
@@ -1246,6 +1269,15 @@ svg {
 
 .public-socials__item:first-child {
   padding-left: 0;
+}
+
+.public-socials__item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
 }
 
 .public-socials__link {
@@ -1286,7 +1318,7 @@ svg {
   transform: translate(-50%, -50%);
   max-width: 450px;
   width: 100%;
-  min-height: 609px;
+  height: 100%;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1730,14 +1762,20 @@ svg {
   margin: 0;
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
+  padding: 77px 24px;
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .element-text {
+    padding: 63px 24px;
+  }
 }
 
 .element-link:hover .element-text,

@@ -80,12 +80,13 @@
           </svg>
         </button>
         <!-- Модальное окно бургер меню -->
+ 
 
         <div class="menu" data-menu>
           <nav class="menu__nav">
             <ul class="menu__nav-list list">
               <li class="menu__nav-item">
-                <a class="menu__nav-link list" href="">Студия</a>
+                <a class="menu__nav-link list menu__nav-current" href="">Студия</a>
               </li>
               <li class="menu__nav-item">
                 <a class="menu__nav-link list" href="./portfolio.html"
@@ -98,16 +99,21 @@
             </ul>
           </nav>
 
-          <div class="menu__group">
+          <ul class="menu__group">
+            <li class="menu__item-phone list">
             <a class="menu__phone list" href="tel:+380961111111"
               >+380961111111</a
             >
+          </li>
 
+          <li class="menu__item-mail list">
             <a class="menu__mail list" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
-          </div>
+          </li>
+          </ul>
 
+        
           <ul class="public-socials list">
             <li class="public-socials__item">
               <a
@@ -146,7 +152,8 @@
             </li>
           </ul>
         </div>
-      </div>
+        </div>
+    
     </header>
 
     <!-- Секция с кнопкой  /////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -527,7 +534,7 @@
                 <!-- desktop  -->
                 <source
                   srcset="
-                    ./images/team/desktop/2.jpg         1x,
+                    ./images/team/desktop/2.jpg 1x,
                     ./images/team/desktop/team_2@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
@@ -537,7 +544,7 @@
                 <!-- tablet  -->
                 <source
                   srcset="
-                    ./images/team/tablet/img2.jpg     1x,
+                    ./images/team/tablet/img2.jpg 1x,
                     ./images/team/tablet/team2@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
@@ -634,7 +641,7 @@
                 <!-- desktop  -->
                 <source
                   srcset="
-                    ./images/team/desktop/3.jpg         1x,
+                    ./images/team/desktop/3.jpg 1x,
                     ./images/team/desktop/team_3@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
@@ -644,7 +651,7 @@
                 <!-- tablet  -->
                 <source
                   srcset="
-                    ./images/team/tablet/img3.jpg     1x,
+                    ./images/team/tablet/img3.jpg 1x,
                     ./images/team/tablet/team3@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
@@ -741,7 +748,7 @@
                 <!-- desktop  -->
                 <source
                   srcset="
-                    ./images/team/desktop/4.jpg         1x,
+                    ./images/team/desktop/4.jpg 1x,
                     ./images/team/desktop/team_4@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
@@ -751,7 +758,7 @@
                 <!-- tablet  -->
                 <source
                   srcset="
-                    ./images/team/tablet/img4.jpg     1x,
+                    ./images/team/tablet/img4.jpg 1x,
                     ./images/team/tablet/team4@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
@@ -760,7 +767,7 @@
                 <!-- mobile -->
                 <source
                   srcset="
-                ./images/team/mobile/img4.jpg 1x,
+                  ./images/team/mobile/img4.jpg 1x,
                  ./images/team/mobile/img4@2x.jpg 2x
                     "
                   media="(max-width: 767px)"

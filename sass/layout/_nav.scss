@@ -1,5 +1,5 @@
 .nav__list {
-  display: none;
+   display: none;
 
   @include mq(tablet) {
     display: flex;
@@ -8,6 +8,11 @@
 
 .nav__item:not(:first-child) {
   margin-left: 50px;
+}
+
+.nav__item:hover,
+.nav__link:focus {
+  color: $logo-color-web;
 }
 
 .nav__link {
@@ -22,10 +27,11 @@
   text-decoration: none;
   letter-spacing: 0.02em;
   transition: color 250ms $timing-function;
+}
 
-  &:hover &:focus {
-    color: $logo-color-web;
-  }
+.nav__link:hover,
+.nav__link:focus {
+  color: $logo-color-web;
 }
 
 .nav__link--current {
@@ -45,4 +51,9 @@
     height: 4px;
     background-color: $logo-color-web;
   }
+}
+
+// Кнопка активная//////////
+.menu__nav-link.menu__nav-current {
+    color: $logo-color-web;
 }
