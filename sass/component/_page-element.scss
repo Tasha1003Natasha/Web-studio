@@ -7,7 +7,10 @@
 }
 
 .page-element {
+  @include mq(mobile-only) {
   display: block;
+  width: 450px;
+}
 
   @include mq(tablet-only) {
     display: flex;
@@ -22,8 +25,12 @@
 
 .element {
   background: #ffffff;
-  width: 450px;
-  margin-bottom: 30px;
+
+  @include mq(mobile-only) {
+    width: 450px;
+    margin-bottom: 30px;
+    
+  }
 
   &:last-child {
     margin-bottom: 0;

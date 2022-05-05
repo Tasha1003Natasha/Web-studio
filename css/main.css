@@ -359,12 +359,7 @@ svg {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-@media screen and (min-width: 480px) {
-  .caption {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/mobile1.jpg);
-  }
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/mobile1.jpg);
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -379,7 +374,7 @@ svg {
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .caption {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/tablet@2x.jpg);
   }
@@ -393,7 +388,7 @@ svg {
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .caption {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/desktop_fon@2x.jpg);
   }
@@ -402,7 +397,7 @@ svg {
 .caption__title {
   margin-top: 0;
   margin-bottom: 30px;
-  width: 360px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   color: #ffffff;
@@ -417,7 +412,7 @@ svg {
 @media screen and (min-width: 1200px) {
   .caption__title {
     margin-bottom: 30px;
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.4;
   }
@@ -779,9 +774,7 @@ svg {
 
 .team {
   padding-top: 30px;
-  padding-left: 122px;
   padding-bottom: 24px;
-  padding-right: 122px;
   /* Должность */
 }
 
@@ -1115,7 +1108,7 @@ svg {
 .menu-button {
   outline: 1px solid red;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -1661,8 +1654,11 @@ svg {
   }
 }
 
-.page-element {
-  display: block;
+@media screen and (max-width: 767.98px) {
+  .page-element {
+    display: block;
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
@@ -1681,8 +1677,13 @@ svg {
 
 .element {
   background: #ffffff;
-  width: 450px;
-  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .element {
+    width: 450px;
+    margin-bottom: 30px;
+  }
 }
 
 .element:last-child {

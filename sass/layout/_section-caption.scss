@@ -9,89 +9,84 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-    // mobile ///////
-    @include mq(mobile) {
-      background-image: linear-gradient(
+  background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/fon/mobile1.jpg);
-    }
+
+  @include mq(retina) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/fon/mobile@2x.jpg);
+  }
+
+  // tablet ///////
+  @include mq(tablet) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/fon/tablet1x.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/fon/mobile@2x.jpg);
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/fon/tablet@2x.jpg);
     }
+  }
 
-    // tablet ///////
-    @include mq(tablet) {
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/fon/tablet1x.jpg);
-    }
+  // desktop ///////
+  @include mq(desktop) {
+    padding: 200px 0;
+    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/fon/fon.jpg);
 
     @include mq(retina) {
       background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/fon/tablet@2x.jpg);
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/fon/desktop_fon@2x.jpg);
     }
-
-
-    // desktop ///////
-    @include mq(desktop) {
-      padding: 200px 0;
-      height: 600px;
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/fon/fon.jpg);
-    }
-
-    @include mq(retina) {
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/fon/desktop_fon@2x.jpg);
-    }
-
+  }
 }
 
-  .caption__title {
-    margin-top: 0;
-    margin-bottom: 30px;
-    width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    color: $page-color;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.6;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.06em;
+.caption__title {
+  margin-top: 0;
+  margin-bottom: 30px;
 
-    @include mq(desktop) {
-      margin-bottom: 30px;
-      width: 696px;
-      font-size: 44px;
-      line-height: 1.4;
-    }
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $page-color;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  @include mq(desktop) {
+    margin-bottom: 30px;
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.4;
+  }
 }
 
 .caption__button {
