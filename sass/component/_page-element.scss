@@ -8,9 +8,9 @@
 
 .page-element {
   @include mq(mobile-only) {
-  display: block;
-  width: 450px;
-}
+    display: block;
+    max-width: 450px;
+  }
 
   @include mq(tablet-only) {
     display: flex;
@@ -25,19 +25,14 @@
 
 .element {
   background: #ffffff;
-
-  @include mq(mobile-only) {
-    width: 450px;
-    margin-bottom: 30px;
-    
-  }
+  margin-bottom: 30px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @include mq(tablet-only) {
-    width: 354px;
+    max-width: 354px;
     display: flex;
     margin-right: 30px;
 
@@ -48,7 +43,7 @@
 
   @include mq(desktop) {
     display: flex;
-    width: 370px;
+    max-width: 370px;
     margin-right: 30px;
 
     &:nth-child(3n) {
@@ -74,6 +69,8 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
+
+
 
 .element-text {
   position: absolute;
