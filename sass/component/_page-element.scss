@@ -58,9 +58,8 @@
 
 /* Тень */
 .element-link {
-  display: block;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: box-shadow 250ms $timing-function;
 
   &:hover,
@@ -70,7 +69,10 @@
   }
 }
 
-
+.element-picture {
+  position: relative;
+  overflow: hidden;
+}
 
 .element-text {
   position: absolute;
@@ -111,17 +113,17 @@
 }
 
 .size {
+  flex-grow: 1;
+
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   background: #ffffff;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
 }
 
 // Кнопка активная//////////
-.active:active {
+.btn-link.active  {
   background-color: rgba(33, 150, 243, 0.9);
+  color: $page-color;
 }
