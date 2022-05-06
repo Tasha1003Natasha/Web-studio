@@ -1,6 +1,6 @@
 .menu-button {
   position: relative;
-  z-index: 10;
+  z-index: 100;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -14,9 +14,9 @@
   background-color: transparent;
   cursor: pointer;
 
- @include mq(tablet) {
-   display: none;
-  }
+  @include mq(tablet) {
+    display: none;
+   }
 }
 
 .menu_icon--open {
@@ -46,7 +46,7 @@
 }
 
 .menu-button.is-open .menu_icon--close {
-  opacity: 10;
+  opacity: 1;
 }
 
 .menu__icon {
@@ -79,7 +79,7 @@
     transform: translateX(0);
   }
 
-  @include mq(mobile) {
+  @include mq(tablet) {
     display: none;
   }
 }
