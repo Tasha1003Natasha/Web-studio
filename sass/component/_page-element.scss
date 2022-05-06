@@ -81,24 +81,29 @@
 
   width: 100%;
   height: 100%;
-  
-  padding: 77px 24px;
 
-  font-size: 18px;
-  line-height: 1.5;
+  padding: 24px;
+  
   letter-spacing: 0.03em;
   color: $page-color;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
   transition: transform 250ms $timing-function;
 
-  @include mq(tablet) {
-    padding: 63px 24px;  
-  }
-
   .element-link:hover &,
   .element-link:focus & {
     transform: translateY(0);
+  }
+
+  @include mq(mobile) {
+    padding: 77px 24px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  @include mq(tablet) {
+    padding: 63px 24px; 
+    
   }
 }
 
