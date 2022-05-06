@@ -64,7 +64,7 @@
 .clients__title {
   margin-top: 0;
   margin-left: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-right: auto;
   color: $accent;
   font-weight: 700;
@@ -76,5 +76,6 @@
   @include mq(desktop) {
     font-size: 36px;
     line-height: 1.7;
+    margin-bottom: 50px;
   }
 }

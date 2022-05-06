@@ -1,8 +1,8 @@
 .section-benefits {
-  padding-top: 60px;
+    padding: 60px 0;
 
-  @include mq(tablet) {
-    padding-top: 94px;
+  @include mq(desktop) {
+    padding: 94px 0;
   }
 }
 

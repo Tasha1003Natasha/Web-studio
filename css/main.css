@@ -454,12 +454,12 @@ svg {
 }
 
 .section-benefits {
-  padding-top: 60px;
+  padding: 60px 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section-benefits {
-    padding-top: 94px;
+    padding: 94px 0;
   }
 }
 
@@ -686,7 +686,7 @@ svg {
 .clients__title {
   margin-top: 0;
   margin-left: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-right: auto;
   color: #212121;
   font-weight: 700;
@@ -700,6 +700,7 @@ svg {
   .clients__title {
     font-size: 36px;
     line-height: 1.7;
+    margin-bottom: 50px;
   }
 }
 
@@ -724,6 +725,7 @@ svg {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: -30px;
   }
 }
 
@@ -1638,10 +1640,16 @@ svg {
   .list-button {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .list-button .item-btn + .item-btn {
     margin-left: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-button {
+    margin-bottom: 50px;
   }
 }
 
@@ -1675,7 +1683,7 @@ svg {
 }
 
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 @media screen and (min-width: 1200px) {
